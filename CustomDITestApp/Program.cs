@@ -6,6 +6,9 @@ using TestGame.World;
 
 namespace CustomDITestApp
 {
+    /// <summary>
+    /// An integration test for the custom dependency framework.
+    /// </summary>
     internal class Program
     {
         static void Main(string[] args)

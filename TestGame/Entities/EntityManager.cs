@@ -10,6 +10,9 @@ namespace TestGame.Entities
         [Inject]
         private EntityConfiguration configuration;
 
+        [Inject(true)]
+        private EntityObjectPool entityObjectPool;
+
         [Inject]
         public EntityDatabase Database { get; private set; }
 
@@ -19,6 +22,7 @@ namespace TestGame.Entities
             Console.WriteLine("Init " + worldContext);
             Console.WriteLine("- cfg: " + configuration);
             Console.WriteLine("- db: " + Database);
+            Console.WriteLine("- pool: " + entityObjectPool);
         }
 
         public BasicEntity Create(string type)
