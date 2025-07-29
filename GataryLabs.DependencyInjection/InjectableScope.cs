@@ -126,7 +126,20 @@ namespace GataryLabs.DependencyInjection
 
         private object ResolveScopedInstance(InjectableInfo info)
         {
+            if (info.instances != null
+                && info.instances.Count != 0
+                && info.instances[0] != null)
+            {
+                return info.instances[0];
+            }
+
             object newInstance = CreateNewInstance(info, this);
+
+            if (newInstance != null)
+            {
+                info.instances.Add(newInstance);
+            }
+
             return newInstance;
         }
 
