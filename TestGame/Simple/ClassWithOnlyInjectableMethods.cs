@@ -1,35 +1,119 @@
-﻿using GataryLabs.DependencyInjection.Attributes;
+﻿using GataryLabs.DependencyInjection;
+using GataryLabs.DependencyInjection.Attributes;
 
 namespace TestGame.Simple
 {
-    [InjectionTarget]
-    public class ClassWithOnlyInjectableMethods : ClassWithInjectableMembers
+    [InjectionTarget(InjectionFlags.All)]
+    public class ClassWithInjectionFlagsAll : ClassWithInjectableMembers
     {
+        [Inject]
+        public ClassWithInjectionFlagsAll(SimpleStuffToInjectD stuff)
+        {
+            this.PropertyInjectedByConstructor = stuff;
+        }
 
+        public ClassWithInjectionFlagsAll()
+        {
+        }
+
+        [Inject]
+        private void MethodToInjectStuffC(SimpleStuffToInjectC stuff)
+        {
+            this.PropertyInjectedByMethod = stuff;
+        }
+    }
+    
+    [InjectionTarget(InjectionFlags.Methods)]
+    public class ClassWithInjectionFlagsMethods : ClassWithInjectableMembers
+    {
+        [Inject]
+        public ClassWithInjectionFlagsMethods(SimpleStuffToInjectD stuff)
+        {
+            this.PropertyInjectedByConstructor = stuff;
+        }
+
+        public ClassWithInjectionFlagsMethods()
+        {
+        }
+
+        [Inject]
+        private void MethodToInjectStuffC(SimpleStuffToInjectC stuff)
+        {
+            this.PropertyInjectedByMethod = stuff;
+        }
+    }
+    
+    [InjectionTarget(InjectionFlags.Fields)]
+    public class ClassWithInjectionFlagsFields : ClassWithInjectableMembers
+    {
+        [Inject]
+        public ClassWithInjectionFlagsFields(SimpleStuffToInjectD stuff)
+        {
+            this.PropertyInjectedByConstructor = stuff;
+        }
+
+        public ClassWithInjectionFlagsFields()
+        {
+        }
+
+        [Inject]
+        private void MethodToInjectStuffC(SimpleStuffToInjectC stuff)
+        {
+            this.PropertyInjectedByMethod = stuff;
+        }
+    }
+    
+    [InjectionTarget(InjectionFlags.Properties)]
+    public class ClassWithInjectionFlagsProperties : ClassWithInjectableMembers
+    {
+        [Inject]
+        public ClassWithInjectionFlagsProperties(SimpleStuffToInjectD stuff)
+        {
+            this.PropertyInjectedByConstructor = stuff;
+        }
+        
+        public ClassWithInjectionFlagsProperties()
+        {
+        }
+
+        [Inject]
+        private void MethodToInjectStuffC(SimpleStuffToInjectC stuff)
+        {
+            this.PropertyInjectedByMethod = stuff;
+        }
+    }
+    
+    [InjectionTarget(InjectionFlags.Constructors)]
+    public class ClassWithInjectionFlagsConstructors : ClassWithInjectableMembers
+    {
+        [Inject]
+        public ClassWithInjectionFlagsConstructors(SimpleStuffToInjectD stuff)
+        {
+            this.PropertyInjectedByConstructor = stuff;
+        }
+        
+        public ClassWithInjectionFlagsConstructors()
+        {
+        }
+
+        [Inject]
+        private void MethodToInjectStuffC(SimpleStuffToInjectC stuff)
+        {
+            this.PropertyInjectedByMethod = stuff;
+        }
     }
 
     public class ClassWithInjectableMembers
     {
-        [Inject] private SimpleStuffToInjectA FieldA;
-        [Inject] private SimpleStuffToInjectB FieldB;
-        [Inject] private SimpleStuffToInjectC FieldC;
+        [Inject] public SimpleStuffToInjectA FieldInjectedDirectly;
 
-        [Inject] private SimpleStuffToInjectA PropertyA { get; set; }
-        [Inject] private SimpleStuffToInjectB PropertyB { get; set; }
-        [Inject] private SimpleStuffToInjectC PropertyC { get; set; }
+        [Inject] public SimpleStuffToInjectB PropertyInjectedDirectly { get; set; }
 
-        [Inject]
-        private void MethodA(SimpleStuffToInjectA stuff)
-        {
-        }
+        public SimpleStuffToInjectC PropertyInjectedByMethod { get; protected set; }
 
-        [Inject]
-        private void MethodB(SimpleStuffToInjectB stuff)
-        {
-        }
+        public SimpleStuffToInjectD PropertyInjectedByConstructor { get; protected set; }
 
-        [Inject]
-        private void MethodC(SimpleStuffToInjectC stuff)
+        public ClassWithInjectableMembers()
         {
         }
     }

@@ -4,7 +4,7 @@ using TestGame.World;
 namespace TestGame.Entities.Behaviours
 {
     [InjectionTarget]
-    internal class FactionOwner
+    public class FactionOwner
     {
         [Inject]
         public FactionController factionController;

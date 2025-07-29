@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TestGame.World
+﻿namespace TestGame.World
 {
-    internal class FactionController
+    public class FactionController
     {
     }
 }

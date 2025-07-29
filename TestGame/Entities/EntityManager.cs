@@ -9,9 +9,6 @@ namespace TestGame.Entities
     public class EntityManager
     {
         [Inject]
-        private InjectableScope scope;
-
-        [Inject]
         private EntityConfiguration configuration;
 
         [Inject(true)]
