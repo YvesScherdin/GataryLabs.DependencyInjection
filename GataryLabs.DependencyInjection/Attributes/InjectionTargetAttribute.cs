@@ -6,7 +6,7 @@ namespace GataryLabs.DependencyInjection.Attributes
     {
         public InjectionFlags Flags { get; private set; }
 
-        public InjectionTargetAttribute(InjectionFlags flags = InjectionFlags.All)
+        public InjectionTargetAttribute(InjectionFlags flags = InjectionFlags.Default)
         {
             this.Flags = flags;
         }

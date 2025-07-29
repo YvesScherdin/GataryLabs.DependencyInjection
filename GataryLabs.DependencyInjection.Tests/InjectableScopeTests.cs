@@ -91,7 +91,6 @@ namespace GataryLabs.DependencyInjection.Tests
             return scope;
         }
 
-        
         [TestMethod]
         public void InjectInto_DefaultScenario_Works()
         {
