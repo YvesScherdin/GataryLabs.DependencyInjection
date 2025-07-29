@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDITestApp", "CustomDI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestGame", "TestGame\TestGame.csproj", "{41700183-4CBB-4645-87C8-5AC2FF8B2094}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GataryLabs.DependencyInjection.Tests", "GataryLabs.DependencyInjection.Tests\GataryLabs.DependencyInjection.Tests.csproj", "{EDE0157E-8478-406C-B05A-338B4209F826}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{41700183-4CBB-4645-87C8-5AC2FF8B2094}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41700183-4CBB-4645-87C8-5AC2FF8B2094}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41700183-4CBB-4645-87C8-5AC2FF8B2094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDE0157E-8478-406C-B05A-338B4209F826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDE0157E-8478-406C-B05A-338B4209F826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDE0157E-8478-406C-B05A-338B4209F826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDE0157E-8478-406C-B05A-338B4209F826}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

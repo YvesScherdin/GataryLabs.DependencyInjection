@@ -13,6 +13,11 @@ namespace CustomDITestApp
     {
         static void Main(string[] args)
         {
+            TestImaginaryScenario();
+        }
+
+        static private void TestImaginaryScenario()
+        {
             InjectableScope scope = new InjectableScope();
 
             scope.RegisterAsSingleton<WorldContext>();
@@ -24,5 +29,6 @@ namespace CustomDITestApp
 
             Console.WriteLine("Entity manager resolved: " + entityManager);
         }
+
     }
 }

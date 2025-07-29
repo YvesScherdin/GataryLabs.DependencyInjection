@@ -1,4 +1,5 @@
-﻿using GataryLabs.DependencyInjection.Attributes;
+﻿using GataryLabs.DependencyInjection;
+using GataryLabs.DependencyInjection.Attributes;
 using System;
 using TestGame.World;
 
@@ -7,6 +8,9 @@ namespace TestGame.Entities
     [InjectionTarget]
     public class EntityManager
     {
+        [Inject]
+        private InjectableScope scope;
+
         [Inject]
         private EntityConfiguration configuration;
 
