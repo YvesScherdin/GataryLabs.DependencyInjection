@@ -1,4 +1,5 @@
 ﻿using GataryLabs.DependencyInjection.Abstractions.Exceptions;
+using GataryLabs.DependencyInjection.Extensions;
 using System;
 using System.Collections.Generic;
 
@@ -7,14 +8,18 @@ namespace GataryLabs.DependencyInjection
     public class InjectableScope : IDisposable
     {
         private Dictionary<Type, InjectableInfo> instancesByType;
+
         private Injector injector;
 
         private InjectableScope parentScope;
+        public InjectableScope ParentScope => parentScope;
 
         public InjectableScope()
         {
             instancesByType = new Dictionary<Type, InjectableInfo>();
             injector = new Injector();
+
+            this.RegisterAsScoped<InjectableScope>(this);
         }
 
         public void Dispose()
@@ -174,6 +179,11 @@ namespace GataryLabs.DependencyInjection
                 object instance = Activator.CreateInstance(type);
                 return instance;
             }
+        }
+
+        public void InjectInto(object target)
+        {
+            injector.CheckInjection(target, target.GetType(), this);
         }
     }
 }
