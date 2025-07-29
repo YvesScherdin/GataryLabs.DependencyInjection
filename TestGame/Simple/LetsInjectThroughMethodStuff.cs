@@ -3,7 +3,7 @@
 namespace TestGame.Simple
 {
     [InjectionTarget]
-    public class LetsInectThroughMethodStuff
+    public class LetsInjectThroughMethodStuff
     {
         public SimpleStuffToInjectA Stuff { get; private set; }
 
@@ -15,11 +15,11 @@ namespace TestGame.Simple
     }
 
     [InjectionTarget]
-    public class LetsInectThroughMethodStuffSpecific : LetsInectThroughMethodStuffBase
+    public class LetsInjectThroughMethodStuffSpecific : LetsInjectThroughMethodStuffBase
     {
     }
 
-    public class LetsInectThroughMethodStuffBase
+    public class LetsInjectThroughMethodStuffBase
     {
         public SimpleStuffToInjectA Stuff { get; private set; }
 

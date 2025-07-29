@@ -25,7 +25,7 @@ namespace CustomDITestApp
 
             scope.RegisterAsTransient<SimpleStuffToInjectA>();
 
-            LetsInectThroughMethodStuff stuff = new LetsInectThroughMethodStuff();
+            LetsInjectThroughMethodStuff stuff = new LetsInjectThroughMethodStuff();
             scope.InjectInto(stuff);
         }
         
@@ -35,7 +35,7 @@ namespace CustomDITestApp
 
             scope.RegisterAsTransient<SimpleStuffToInjectA>();
 
-            LetsInectThroughMethodStuffSpecific stuff = new LetsInectThroughMethodStuffSpecific();
+            LetsInjectThroughMethodStuffSpecific stuff = new LetsInjectThroughMethodStuffSpecific();
             scope.InjectInto(stuff);
             Console.WriteLine(stuff.Stuff);
         }
