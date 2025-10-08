@@ -10,7 +10,7 @@ A lightweight dependency injection solution in C#. Made for use in Unity.
 	- annotate members of class with [Inject attribute](https://github.com/YvesScherdin/GataryLabs.DependencyInjection/blob/main/GataryLabs.DependencyInjection/Attributes/InjectAttribute.cs)
 		- it may be fields, setter properties or methods
 		- even members with private access modifiers are considered
-	- example: [EntityManager](https://github.com/YvesScherdin/GataryLabs.DependencyInjection/blob/main/TestGame/Entities/EntityManager.cs)
+	- See [example of how to prepare injectable members / parameters](https://github.com/YvesScherdin/GataryLabs.DependencyInjection/blob/main/TestGame/Entities/EntityManager.cs)
 - prepare injectable scope (what Microsoft would call 'ServiceCollection', or 'ServiceProvider' after being built)
 	- create instance, e.g. `InjectableScope scope = new InjectableScope();`
 		- a hierarchical scope structure is possible; see `CreateScope()` method of InjectableScope instances, which creates a sub scope
