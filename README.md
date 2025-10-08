@@ -3,7 +3,7 @@ A lightweight dependency injection solution in C#. Made for use in Unity.
 
 ## How to
 
-- use [source code](https://github.com/YvesScherdin/GataryLabs.DependencyInjection/tree/main/GataryLabs.DependencyInjection)
+- using [GataryLabs.DependencyInjection](https://github.com/YvesScherdin/GataryLabs.DependencyInjection/tree/main/GataryLabs.DependencyInjection)
 	- .csproj-file not needed, actually
 - prepare class
 	- annotate class that shall receive dependency injection with attribute [InjectionTarget attribute](https://github.com/YvesScherdin/GataryLabs.DependencyInjection/tree/main/GataryLabs.DependencyInjection/Attributes)
