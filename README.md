@@ -26,6 +26,7 @@ A lightweight dependency injection solution in C#. Made for use in Unity.
 
 - Lazy<>-Wrapper and resolver
 - cyclic redundancy check - so just watch what you do
+- real abstraction project GataryLabs.DependencyInjection.Abstractions, with interfaces like IInjectionScope
 
 ## Example
 
